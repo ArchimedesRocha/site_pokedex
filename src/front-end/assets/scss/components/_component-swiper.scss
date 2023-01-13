@@ -1,0 +1,22 @@
+.s-hero {
+  .swiper {
+    overflow: visible !important;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 7.7rem !important;
+  }
+
+  .swiper-pagination {
+    text-align: right !important;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    background: rgb(255, 255, 255) !important;
+  }
+}

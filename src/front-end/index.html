@@ -18,7 +18,6 @@
   <title>Machne Pokédex</title>
 </head>
 
-
 <body>
   <header>
     <div class="container">
@@ -72,7 +71,7 @@
                   </div>
                   <div class="header-bottom">
                     <div class="call-to-action">
-                      <a href="">
+                      <a href="#filter">
                         <p>Explorar</p>
                         <img src="./assets/img/Home/Home-header/ico-arrow-down-16.png" alt="" />
                       </a>
@@ -114,7 +113,7 @@
                   </div>
                   <div class="header-bottom">
                     <div class="call-to-action">
-                      <a href="">
+                      <a href="#filter">
                         <p>Explorar</p>
                         <img src="./assets/img/Home/Home-header/ico-arrow-down-16.png" alt="" />
                       </a>
@@ -156,7 +155,7 @@
                   </div>
                   <div class="header-bottom">
                     <div class="call-to-action">
-                      <a href="">
+                      <a href="#filter">
                         <p>Explorar</p>
                         <img src="./assets/img/Home/Home-header/ico-arrow-down-16.png" alt="" />
                       </a>
@@ -179,7 +178,7 @@
     </div>
   </section>
 
-  <section class="s-search">
+  <section class="s-search" id="filter">
     <div class="container">
       <div class="internal-container">
         <div class="text">
@@ -344,21 +343,9 @@
     </div>
   </footer>
 
-  <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-    });
-  </script>
+  <script src="./assets/js/lib/plugins.js"></script>
+  <script src="./assets/js/all.js"></script>
 </body>
 
 </html>

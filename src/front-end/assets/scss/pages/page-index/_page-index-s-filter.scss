@@ -1,0 +1,154 @@
+.s-filter {
+  .container {
+    max-width: 144rem;
+    padding-top: 7.4rem;
+    padding-bottom: 12.9rem;
+    .internal-container {
+      display: flex;
+      .select-filter {
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          li {
+            padding-bottom: 4.2rem;
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 2.3rem;
+              img {
+                width: 1.8rem;
+                height: 1.8rem;
+              }
+              p {
+                font-family: "Inter", sans-serif;
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 150%;
+                color: $cor35;
+              }
+              .selected-text {
+                color: $cor10;
+              }
+            }
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+      .result-filter {
+        width: 100%;
+        margin-left: 14.6rem;
+        border-left: 0.1rem solid #eff3f6;
+        padding-left: 7.5rem;
+        .result-top {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          .result {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.8rem;
+            .logo {
+              img {
+                width: 2rem;
+                height: 2rem;
+              }
+            }
+            .text {
+              h3 {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                font-size: 1.8rem;
+                line-height: 150%;
+                color: $cor36;
+              }
+              p {
+                font-family: "Inter", sans-serif;
+                font-size: 1.4rem;
+                line-height: 150%;
+                color: $cor31;
+              }
+            }
+          }
+          .order {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            img {
+              width: 10px;
+              height: 16px;
+            }
+            p {
+              font-family: "Inter", sans-serif;
+              font-weight: 500;
+              font-size: 1.6rem;
+              line-height: 150%;
+              color: $cor31;
+            }
+          }
+        }
+        .result-bottom {
+          .cards {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 3.2rem;
+            margin-top: 7.9rem;
+
+            .card {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              width: 100%;
+              max-width: 28rem;
+              height: 30rem;
+              padding: 2.8rem;
+              background: #ffffff;
+              box-shadow: 0rem 1rem 5.1rem -0.5rem rgba(183, 189, 193, 0.3);
+              border-radius: 1.2rem;
+              .pokemon-img {
+                img {
+                  width: 17rem;
+                  height: 17rem;
+                  margin: 0 auto;
+                  &.fire {
+                    background: url(../../assets/img/Home/Home-s-filter/pokemons/ellipse-yellow.png)
+                      no-repeat center center;
+                  }
+                  &.plants {
+                    background: url(../../assets/img/Home/Home-s-filter/pokemons/ellipse-green.png)
+                      no-repeat center center;
+                  }
+                  &.water {
+                    background: url(../../assets/img/Home/Home-s-filter/pokemons/ellipse-blue.png)
+                      no-repeat center center;
+                  }
+                }
+              }
+              .pokemon-info {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between !important;
+                .number-name {
+                  p {
+                  }
+                  h3 {
+                  }
+                }
+                .pokemon-type {
+                  img {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
