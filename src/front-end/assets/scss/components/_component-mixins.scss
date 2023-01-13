@@ -1,0 +1,18 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin responsive-ultrawide($screenWidth) {
+  @media (min-width: $screenWidth) {
+    @content;
+  }
+}
