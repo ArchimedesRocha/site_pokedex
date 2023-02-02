@@ -1,21 +1,27 @@
 .s-hero {
-  .s-slider-1, .s-slider-2, .s-slider-3 {    
+
+  .s-slider-1,
+  .s-slider-2,
+  .s-slider-3 {
     padding-top: 15rem;
+
     .container {
+      position: relative;
+
       .bg-1 {
         .bg-icons {
           position: absolute;
-          width: 1190px;
-          height: 488px;
-          left: 42rem;
+          height: 48.8rem;
           top: 8rem;
-        }        
+        }
+
         .internal-container {
           .header-middle {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             .icon {
               display: flex;
               justify-content: space-between;
@@ -26,6 +32,7 @@
               border-radius: 24.4rem;
               margin-bottom: 1rem;
               padding: 0.6rem;
+
               img {
                 width: 2.8rem;
                 height: 2.8rem;
@@ -33,6 +40,7 @@
                 background: rgba(189, 29, 29, 0.15) center center;
                 border-radius: 5rem;
               }
+
               p {
                 font-family: "Inter", sans-serif;
                 font-weight: 600;
@@ -42,6 +50,7 @@
                 padding-right: 1.5rem;
               }
             }
+
             .texto {
               h1 {
                 font-family: "Montserrat", sans-serif;
@@ -52,58 +61,66 @@
                 letter-spacing: -0.01em;
                 color: $cor33;
               }
+
               p {
                 font-family: "Inter", sans-serif;
                 font-weight: 500;
-                font-size: 18px;
+                font-size: 1.8rem;
                 line-height: 150%;
                 text-align: center;
                 color: $cor33;
                 margin-bottom: 3rem;
               }
             }
-          }          
+          }
+
           .header-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
             position: relative;
             padding: 20rem 0 7.7rem 0;
+
             .call-to-action {
-              a {                
-              @include flex(column, center, center);
-              gap: 5rem;              
-              p {
-                font-family: "Inter", sans-serif;
-                font-weight: 700;
-                font-size: 13px;
-                line-height: 150%;
-                letter-spacing: .25rem;
-                color: $cor33;
-                transform: rotate(-90deg);
-                text-transform: uppercase;
-              }
-              img {
-                width: 5rem;
-                height: 5rem;
-                padding: 1.3rem;
-                border-radius: 50%;
-              }
+              width: 5rem;
+
+              a {
+                @include flex(column, center, center);
+                gap: 5rem;
+
+                p {
+                  font-family: "Inter", sans-serif;
+                  font-weight: 700;
+                  font-size: 13px;
+                  line-height: 150%;
+                  letter-spacing: .25rem;
+                  color: $cor33;
+                  transform: rotate(-90deg);
+                  text-transform: uppercase;
+                }
+
+                img {
+                  width: 5rem;
+                  height: 5rem;
+                  padding: 1.3rem;
+                  border-radius: 50%;
+                }
               }
             }
+
             .header-pulse {
               img {
                 position: absolute;
+
                 &:nth-child(1) {
                   max-width: 62.6rem;
                   left: 31rem;
                   top: 2rem;
                 }
+
                 &:nth-child(2) {
                   max-width: 51.6rem;
                   left: 36.5rem;
                   top: 7.5rem;
                 }
+
                 &:nth-child(3) {
                   max-width: 41rem;
                   left: 41.5rem;
@@ -115,10 +132,12 @@
                   left: 53.5rem;
                   top: 11.75rem;
                 }
+
                 &:nth-child(5) {
-                  max-width: 81rem;
-                  left: 22rem;
-                  top: 15rem;
+                  max-width: 77rem;
+                  left: 24rem;
+                  top: 16.5rem;
+                  animation: float 2s infinite;
                 }
               }
 
@@ -154,16 +173,19 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   10% {
                     transform: scale(0.9);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   20% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   100% {
                     transform: scale(0.8);
                     filter: alpha(opacity=50);
@@ -177,16 +199,19 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   10% {
                     transform: scale(0.9);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   20% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   100% {
                     transform: scale(0.8);
                     filter: alpha(opacity=50);
@@ -200,16 +225,19 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   10% {
                     transform: scale(0.9);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   20% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   100% {
                     transform: scale(0.8);
                     filter: alpha(opacity=50);
@@ -225,11 +253,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   80% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
                     opacity: 0;
                   }
+
                   100% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
@@ -243,11 +273,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   80% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
                     opacity: 0;
                   }
+
                   100% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
@@ -261,11 +293,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   80% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
                     opacity: 0;
                   }
+
                   100% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
@@ -281,11 +315,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   30% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   100% {
                     transform: scale(2.5);
                     filter: alpha(opacity=0);
@@ -299,11 +335,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   30% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   100% {
                     transform: scale(2.5);
                     filter: alpha(opacity=0);
@@ -317,11 +355,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   30% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
                     opacity: 0.5;
                   }
+
                   100% {
                     transform: scale(2.5);
                     filter: alpha(opacity=0);
@@ -334,6 +374,7 @@
                 animation: pulse-two 2000ms linear infinite;
                 -webkit-animation: pulse-two 2000ms linear infinite;
                 -moz-animation: pulse-two 2000ms linear infinite;
+
                 .load:after,
                 .load:before {
                   content: "";
@@ -361,16 +402,19 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   10% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   20% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   100% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
@@ -384,16 +428,19 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   10% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   20% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   100% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
@@ -407,16 +454,19 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   10% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   20% {
                     transform: scale(1);
                     filter: alpha(opacity=1);
                     opacity: 1;
                   }
+
                   100% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
@@ -432,11 +482,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   80% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
                     opacity: 0;
                   }
+
                   100% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
@@ -450,11 +502,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   80% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
                     opacity: 0;
                   }
+
                   100% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
@@ -468,11 +522,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   80% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
                     opacity: 0;
                   }
+
                   100% {
                     transform: scale(3.5);
                     filter: alpha(opacity=0);
@@ -488,11 +544,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   30% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   100% {
                     transform: scale(2.5);
                     filter: alpha(opacity=0);
@@ -506,11 +564,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   30% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   100% {
                     transform: scale(2.5);
                     filter: alpha(opacity=0);
@@ -524,11 +584,13 @@
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   30% {
                     transform: scale(0.9);
                     filter: alpha(opacity=50);
                     opacity: 0.3;
                   }
+
                   100% {
                     transform: scale(2.5);
                     filter: alpha(opacity=0);
@@ -537,6 +599,7 @@
                 }
               }
             }
+
             .pagination {
               img {
                 width: 2.8rem;
@@ -548,6 +611,32 @@
       }
     }
   }
+
+  .s-slider-1,
+  .s-slider-2,
+  .s-slider-3 {
+    .container {
+      .bg-1 {
+        .internal-container {
+
+          .header-bottom {
+            .header-pulse {
+              img {
+                position: absolute;
+
+                &:nth-child(5) {
+                  max-width: 29rem;
+                  left: 48rem;
+                  top: 19rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .s-slider-1 {
     .container {
       .bg-1 {
@@ -559,6 +648,7 @@
               }
             }
           }
+
           .header-bottom {
             .call-to-action {
               img {
@@ -570,6 +660,7 @@
       }
     }
   }
+
   .s-slider-2 {
     .container {
       .bg-1 {
@@ -581,20 +672,11 @@
               }
             }
           }
+
           .header-bottom {
             .call-to-action {
               img {
                 background: $cor10;
-              }
-            }
-            .header-pulse {
-              img {
-                position: absolute;
-                &:nth-child(5) {
-                  max-width: 43rem;
-                  left: 40rem;
-                  top: 11rem;
-                }
               }
             }
           }
@@ -602,6 +684,7 @@
       }
     }
   }
+
   .s-slider-3 {
     .container {
       .bg-1 {
@@ -613,20 +696,11 @@
               }
             }
           }
+
           .header-bottom {
             .call-to-action {
               img {
                 background: $cor30;
-              }
-            }
-            .header-pulse {
-              img {
-                position: absolute;
-                &:nth-child(5) {
-                  max-width: 29rem;
-                  left: 48rem;
-                  top: 19rem;
-                }
               }
             }
           }

@@ -1,19 +1,13 @@
 footer {
-  .bg-red {
-    background: $cor03;
-  }
-  .bg-blue {
-    background: $cor11;
-  }
-  .bg-black {
-    background: $cor30;
-  }
+  background: $cor03;
+
   .container {
     .internal-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 6.5rem 0;
+
       .text-footer {
         h3 {
           font-family: "Inter", sans-serif;
@@ -22,6 +16,7 @@ footer {
           line-height: 180%;
           color: $cor33;
         }
+
         p {
           font-family: "Inter", sans-serif;
           font-weight: 500;
@@ -30,6 +25,7 @@ footer {
           color: rgba(255, 255, 255, 0.8);
         }
       }
+
       .img-footer {
         img {
           width: 17.2rem;

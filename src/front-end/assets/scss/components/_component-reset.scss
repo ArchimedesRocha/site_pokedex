@@ -7,6 +7,7 @@
   border: none;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  border: 0.1rem solid red;
 }
 
 img {
@@ -18,9 +19,11 @@ img {
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
+
   @include responsive(1300px) {
     font-size: 58%;
   }
+
   @include responsive(990px) {
     font-size: 62.5%;
   }
