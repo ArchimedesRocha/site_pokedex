@@ -1,5 +1,7 @@
 footer {
-  background: $cor03;
+  background: linear-gradient(284.15deg,
+      #eff3f6 15.54%,
+      rgba(239, 243, 246, 0) 86.34%);
 
   .container {
     .internal-container {
@@ -14,7 +16,7 @@ footer {
           font-weight: bold;
           font-size: 18px;
           line-height: 180%;
-          color: $cor33;
+          color: $cor30;
         }
 
         p {
@@ -22,7 +24,7 @@ footer {
           font-weight: 500;
           font-size: 14px;
           line-height: 180%;
-          color: rgba(255, 255, 255, 0.8);
+          color: $cor30;
         }
       }
 

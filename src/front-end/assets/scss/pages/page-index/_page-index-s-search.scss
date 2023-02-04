@@ -1,4 +1,7 @@
 .s-search {
+  width: 100%;
+  position: absolute;
+  bottom: -8.5rem;
   background: linear-gradient(284.15deg,
       #eff3f6 15.54%,
       rgba(239, 243, 246, 0) 86.34%);
@@ -9,7 +12,6 @@
     align-items: center;
     height: 28.8rem;
     position: relative;
-    max-width: 144rem;
 
     .text {
       h2 {
@@ -40,6 +42,7 @@
         font-size: 1.5rem;
         line-height: 150%;
         color: $cor37;
+        height: 4.5rem;
 
         &::placeholder {
           color: $cor37;
