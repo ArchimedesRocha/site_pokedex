@@ -34,6 +34,8 @@
       height: 5.6rem;
       padding-left: 2.5rem;
       padding-right: 0.7rem;
+      transition: all .3s;
+      border: 0.1rem solid #fff;
 
       input[type=text] {
         border: 0;
@@ -47,6 +49,23 @@
         &::placeholder {
           color: $cor37;
         }
+      }
+
+
+      button {
+        border: 0.1rem solid #fff;
+        border-radius: 100%;
+        transition: all .3s;
+
+        &:hover {
+          border: 0.1rem solid $cor31;
+          border-radius: 12.2rem;
+        }
+      }
+
+      &:hover {
+        border: 0.1rem solid $cor32;
+        border-radius: 12.2rem;
       }
     }
 

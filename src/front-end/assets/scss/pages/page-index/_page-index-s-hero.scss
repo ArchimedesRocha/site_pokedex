@@ -630,19 +630,25 @@
   .s-slider-1 {
     .container {
       .bg {
-        .internal-container {
-          .header-middle {
-            .icon {
-              p {
-                color: $cor01;
-              }
+        .header-middle {
+          .icon {
+            p {
+              color: $cor01;
             }
           }
+        }
 
-          .header-bottom {
-            .call-to-action {
+        .header-bottom {
+          .call-to-action {
+            img {
+              transition: all .3s;
+              border: 0.1rem solid #fff;
+            }
+
+            &:hover {
               img {
-                background: $cor01;
+                background: $cor02;
+                border: 0.1rem solid $cor02;
               }
             }
           }
@@ -654,47 +660,61 @@
   .s-slider-2 {
     .container {
       .bg {
-        .internal-container {
-          .header-middle {
-            .icon {
-              p {
-                color: $cor10;
-              }
+        .header-middle {
+          .icon {
+            p {
+              color: $cor10;
             }
           }
+        }
 
-          .header-bottom {
-            .call-to-action {
+        .header-bottom {
+          .call-to-action {
+            img {
+              transition: all .3s;
+              border: 0.1rem solid #fff;
+            }
+
+            &:hover {
               img {
                 background: $cor10;
+                border: 0.1rem solid $cor10;
               }
             }
           }
         }
       }
     }
+
   }
 
   .s-slider-3 {
     .container {
       .bg {
-        .internal-container {
-          .header-middle {
-            .icon {
-              p {
-                color: $cor30;
-              }
+        .header-middle {
+          .icon {
+            p {
+              color: $cor30;
             }
           }
+        }
 
-          .header-bottom {
-            .call-to-action {
+        .header-bottom {
+          .call-to-action {
+            img {
+              transition: all .3s;
+              border: 0.1rem solid #fff;
+            }
+
+            &:hover {
               img {
                 background: $cor30;
+                border: 0.1rem solid $cor30;
               }
             }
           }
         }
+
       }
     }
   }

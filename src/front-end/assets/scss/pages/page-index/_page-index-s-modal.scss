@@ -1,0 +1,197 @@
+.s-modal {
+
+  .container {
+    background: url('../../assets/img/Modal/bg-bug.svg') no-repeat;
+    width: 71rem;
+    height: 50.8rem;
+    position: relative;
+    box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
+    border-radius: 1.6rem;
+
+    .close {
+      width: 4.6rem;
+      height: 4.6rem;
+      background-color: #fff;
+      padding: 1rem;
+      position: absolute;
+      top: -5rem;
+      right: 0;
+      border-radius: .5rem;
+      box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
+
+      @include flex(row, center, center);
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .modal {
+      position: relative;
+      height: 100%;
+
+      .left {
+        width: 19.1rem;
+        position: relative;
+
+        .icon {
+          width: 3.4rem;
+          height: 3.4rem;
+          background-color: #fff;
+          border-radius: 50%;
+          padding: .75rem;
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+          z-index: 2;
+
+          img {
+            width: 1.7rem;
+          }
+        }
+
+        img {
+          &:nth-child(1) {
+            width: 19.1rem;
+          }
+        }
+      }
+
+      .pokemon {
+        max-width: 20.2rem;
+        position: absolute;
+        top: 35%;
+        left: 1%;
+      }
+
+      .right {
+        float: right;
+        padding: 3.5rem 7.2rem 3.5rem 7.4rem;
+
+        .name {
+          display: flex;
+          align-items: baseline;
+          gap: .8rem;
+
+          h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+            text-align: center;
+            letter-spacing: -0.01em;
+            color: #2F3133;
+
+          }
+
+          p {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            text-align: center;
+            letter-spacing: -0.01em;
+            color: #7A7D80;
+
+          }
+        }
+
+        .type {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+
+        .physic {
+          display: flex;
+          gap: 4.8rem;
+          margin-top: 3.2rem;
+
+          .height,
+          .weight,
+          .abilities {
+            p {
+              font-family: 'Inter', sans-serif;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.3rem;
+              line-height: 1.6rem;
+              text-align: center;
+              letter-spacing: -0.01em;
+              color: #7A7D80;
+            }
+
+            h4 {
+              font-family: 'Montserrat', sans-serif;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 1.4rem;
+              line-height: 1.7rem;
+              text-align: center;
+              letter-spacing: -0.01em;
+              color: #2F3133;
+
+            }
+          }
+        }
+
+        .weaknesses {
+          margin-top: 3.2rem;
+
+          h3 {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+            letter-spacing: -0.01em;
+            color: #4D5053;
+          }
+
+          .tags {
+            margin-top: 1.6rem;
+            display: flex;
+            gap: 1rem;
+          }
+        }
+
+        .stats {
+          margin-top: 3.2rem;
+
+          h3 {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+            letter-spacing: -0.01em;
+            color: #4D5053;
+
+          }
+
+          .hp,
+          .attack,
+          .defense,
+          .sp-attack,
+          .sp-defense,
+          .speed {
+            margin-top: 1.6rem;
+
+            h3 {
+              font-family: 'Inter', sans-serif;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.2rem;
+              line-height: 1.5rem;
+              color: #7A7D80;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

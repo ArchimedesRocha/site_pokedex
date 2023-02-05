@@ -15,15 +15,27 @@
         li {
           padding-bottom: 4.2rem;
 
-          a {
+          button {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             gap: 2.3rem;
 
-            img {
-              width: 1.8rem;
-              height: 1.8rem;
+            svg {
+              width: 2.8rem;
+              height: 2.8rem;
+              transition: all .3s;
+
+              path {
+                fill: $cor32;
+                transition: all .3s;
+              }
+
+              circle {
+                stroke: $cor32;
+                fill: $cor33;
+                transition: all .3s;
+              }
             }
 
             p {
@@ -32,10 +44,438 @@
               font-size: 1.5rem;
               line-height: 150%;
               color: $cor35;
+              transition: all .3s;
+            }
+          }
+
+          &:nth-child(1) {
+            svg {
+              path {
+                fill: $cor32;
+                stroke: $cor33;
+              }
+
+              circle {
+                stroke: $cor33;
+                fill: $cor32;
+              }
             }
 
-            .selected-text {
-              color: $cor10;
+            &:hover {
+              svg {
+                path {
+                  fill: $cor40;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor40;
+                }
+              }
+
+              p {
+                color: $cor40;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor40;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor40;
+                }
+              }
+
+              p {
+                color: $cor40;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor41;
+                }
+
+                circle {
+                  stroke: $cor41;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor41;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor41;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor41;
+                }
+              }
+
+              p {
+                color: $cor41;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor42;
+                }
+
+                circle {
+                  stroke: $cor42;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor42;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor42;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor42;
+                }
+              }
+
+              p {
+                color: $cor42;
+              }
+            }
+          }
+
+          &:nth-child(4) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor43;
+                }
+
+                circle {
+                  stroke: $cor43;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor43;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor43;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor43;
+                }
+              }
+
+              p {
+                color: $cor43;
+              }
+            }
+          }
+
+          &:nth-child(5) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor44;
+                }
+
+                circle {
+                  stroke: $cor44;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor44;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor44;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor44;
+                }
+              }
+
+              p {
+                color: $cor44;
+              }
+            }
+          }
+
+          &:nth-child(6) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor45;
+                }
+
+                circle {
+                  stroke: $cor45;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor45;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor45;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor45;
+                }
+              }
+
+              p {
+                color: $cor45;
+              }
+            }
+          }
+
+          &:nth-child(7) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor46;
+                }
+
+                circle {
+                  stroke: $cor46;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor46;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor46;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor46;
+                }
+              }
+
+              p {
+                color: $cor46;
+              }
+            }
+          }
+
+          &:nth-child(8) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor47;
+                }
+
+                circle {
+                  stroke: $cor47;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor47;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor47;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor47;
+                }
+              }
+
+              p {
+                color: $cor47;
+              }
+            }
+          }
+
+          &:nth-child(9) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor48;
+                }
+
+                circle {
+                  stroke: $cor48;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor48;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor48;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor48;
+                }
+              }
+
+              p {
+                color: $cor48;
+              }
+            }
+          }
+
+          &:nth-child(10) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor49;
+                }
+
+                circle {
+                  stroke: $cor49;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor49;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor49;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor49;
+                }
+              }
+
+              p {
+                color: $cor49;
+              }
+            }
+          }
+
+          &:nth-child(11) {
+            &:hover {
+              svg {
+                path {
+                  fill: $cor50;
+                }
+
+                circle {
+                  stroke: $cor50;
+                  fill: $cor33;
+                }
+              }
+
+              p {
+                color: $cor50;
+
+              }
+            }
+
+            .active-button {
+              svg {
+                path {
+                  fill: $cor50;
+                  stroke: $cor33;
+                }
+
+                circle {
+                  stroke: $cor33;
+                  fill: $cor50;
+                }
+              }
+
+              p {
+                color: $cor50;
+              }
             }
           }
 
@@ -48,7 +488,7 @@
 
     .result-filter {
       width: 100%;
-      border-left: 0.1rem solid #eff3f6;
+      border-left: 0.1rem solid $cor38;
       padding-left: 7.5rem;
 
       .result-top {
@@ -127,6 +567,7 @@
             box-shadow: 0rem 1rem 5.1rem -0.5rem rgba(183, 189, 193, 0.3);
             border-radius: 1.2rem;
             transition: all .3s;
+            overflow: hidden;
 
             .pokemon-img {
               img {
@@ -135,15 +576,15 @@
                 margin: 0 auto;
 
                 &.fire {
-                  background: url(../../assets/img/Home/Home-s-filter/pokemons/ellipse-yellow.png) no-repeat center center;
+                  background: url(../../assets/img/Pokemons-bg-circle/fire.png) no-repeat center center;
                 }
 
                 &.plants {
-                  background: url(../../assets/img/Home/Home-s-filter/pokemons/ellipse-green.png) no-repeat center center;
+                  background: url(../../assets/img/Pokemons-bg-circle/plants.png) no-repeat center center;
                 }
 
                 &.water {
-                  background: url(../../assets/img/Home/Home-s-filter/pokemons/ellipse-blue.png) no-repeat center center;
+                  background: url(../../assets/img/Pokemons-bg-circle/water.png) no-repeat center center;
                 }
               }
             }
@@ -182,8 +623,7 @@
             }
 
             &:hover {
-              box-shadow: 0rem 1rem 5.1rem -0.5rem rgba(183, 189, 193, 0.7);
-              border: 0.1rem solid rgba(183, 189, 193, 1);
+              transform: scale(1.1);
             }
           }
         }
