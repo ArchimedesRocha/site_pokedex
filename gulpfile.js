@@ -118,7 +118,7 @@ function compilaHTML() {
     .pipe(wait(3000))
     .pipe(
       htmlmin({
-        collapseWhitespace: true,
+        collapsewhitespace: true,
       })
     )
     .pipe(gulp.dest(paths.html.output))

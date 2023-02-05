@@ -40,13 +40,29 @@ header {
               font-size: 13px;
               line-height: 16px;
               text-align: right;
-              color: $cor33;
+              color: white;
               font-weight: 200;
             }
           }
         }
       }
 
+    }
+  }
+}
+
+@include responsive(480px) {
+  header {
+    .container {
+      .header-top {
+        nav {
+          @include center();
+
+          ul {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

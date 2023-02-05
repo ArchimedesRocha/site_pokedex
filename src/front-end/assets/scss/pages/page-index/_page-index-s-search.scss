@@ -21,21 +21,31 @@
         font-size: 32px;
         line-height: 39px;
         letter-spacing: -0.01em;
-        color: $cor30;
+        color: var(--type-gray-100);
       }
     }
 
     .search {
-      @include flex(row, center, space-between);
-      background-color: $cor33;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      background-color: white;
       border-radius: 12.2rem;
+      border: 0.1rem solid #fff;
+
       width: 100%;
       max-width: 40.3rem;
       height: 5.6rem;
-      padding-left: 2.5rem;
-      padding-right: 0.7rem;
+
+      padding-right: 2.5rem;
+      padding-left: 0.7rem;
+
+      position: absolute;
+      right: 0;
+      z-index: 1;
+
       transition: all .3s;
-      border: 0.1rem solid #fff;
 
       input[type=text] {
         border: 0;
@@ -43,11 +53,11 @@
         width: 80%;
         font-size: 1.5rem;
         line-height: 150%;
-        color: $cor37;
+        color: var(--type-gray-800);
         height: 4.5rem;
 
         &::placeholder {
-          color: $cor37;
+          color: var(--type-gray-800);
         }
       }
 
@@ -58,13 +68,13 @@
         transition: all .3s;
 
         &:hover {
-          border: 0.1rem solid $cor31;
+          border: 0.1rem solid var(--type-gray-200);
           border-radius: 12.2rem;
         }
       }
 
       &:hover {
-        border: 0.1rem solid $cor32;
+        border: 0.1rem solid var(--type-gray-300);
         border-radius: 12.2rem;
       }
     }

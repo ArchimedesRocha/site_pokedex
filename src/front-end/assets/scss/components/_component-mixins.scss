@@ -5,6 +5,12 @@
   justify-content: $justify;
 }
 
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin responsive($screenWidth) {
   @media (max-width: $screenWidth) {
     @content;

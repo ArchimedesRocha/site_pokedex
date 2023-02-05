@@ -4,34 +4,32 @@ footer {
       rgba(239, 243, 246, 0) 86.34%);
 
   .container {
-    .internal-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 6.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6.5rem 0;
 
-      .text-footer {
-        h3 {
-          font-family: "Inter", sans-serif;
-          font-weight: bold;
-          font-size: 18px;
-          line-height: 180%;
-          color: $cor30;
-        }
-
-        p {
-          font-family: "Inter", sans-serif;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 180%;
-          color: $cor30;
-        }
+    .text-footer {
+      h3 {
+        font-family: "Inter", sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 180%;
+        color: var(--type-gray-100);
       }
 
-      .img-footer {
-        img {
-          width: 17.2rem;
-        }
+      p {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 180%;
+        color: var(--type-gray-100);
+      }
+    }
+
+    .img-footer {
+      img {
+        width: 17.2rem;
       }
     }
   }

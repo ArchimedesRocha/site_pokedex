@@ -21,26 +21,21 @@
 <body>
   <header>
     <div class="container">
-      <div class="internal-container">
-        <div class="header-top">
-          <nav>
-            <img class="logo" src="./assets/img/Logo.png" alt="Logo Pokémon" />
-            <ul>
-              <li>
-                <p>Projeto Didático</p>
-              </li>
-              <li>
-                <img class="arrow-right" src="./assets/img/Home/Home-header/ico-right-arrow-16.png" alt="Right Arrow" />
-              </li>
-              <li>
-                <p>Machine <strong>Pokédex</strong></p>
-              </li>
-              <li>
-                <img class="ico-hamburguer" src="./assets/img/Home/Home-header/icon-menu.png" alt="Icone Hamburguer" />
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <div class="header-top">
+        <nav>
+          <img class="logo" src="./assets/img/Logo.png" alt="Logo Pokémon" />
+          <ul>
+            <li>
+              <p>Projeto Didático</p>
+            </li>
+            <li>
+              <img class="arrow-right" src="./assets/img/Home/Home-header/ico-right-arrow-16.png" alt="Right Arrow" />
+            </li>
+            <li>
+              <p>Machine <strong>Pokédex</strong></p>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
@@ -230,21 +225,22 @@
     </div>
   </section>
 
-  <section class="s-search" id="filter">
+
+  <!-- <section class="s-search" id="filter">
     <div class="container">
       <div class="text">
         <h2>Escolha o seu Pokémon</h2>
       </div>
       <div class="search">
-        <input type="text" id="site-search" class="input-search" placeholder="Nome ou código" />
         <button>
           <img src="./assets/img/Home/Home-s-pesquisa/icon-search.png" alt="Lupa" />
         </button>
+        <input type="text" id="site-search" class="input-search" placeholder="Nome ou código" />
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="s-filter">
+  <!-- <section class="s-filter">
     <div class="container">
       <div class="select-filter">
         <ul>
@@ -375,15 +371,65 @@
             </div>
           </div>
           <div class="order">
-            <img src="./assets/img/Home/Home-s-filter/icons/icon-ordered.png" alt="" />
-            <p>Ordenar por</p>
+            <button>
+              <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.92308 0L9.84615 6.76923H0L4.92308 0Z" fill="#3E75C3" />
+                <path opacity="0.5" d="M4.92311 16L3.69646e-05 9.23077L9.84619 9.23077L4.92311 16Z" fill="#3E75C3" />
+              </svg>
+              <p>Ordenar por</p>
+            </button>
           </div>
         </div>
         <div class="result-bottom">
           <div class="cards">
-            <div class="card">
+            <button class="card js-open-details-pokemon">
               <div class="pokemon-img">
-                <img src="./assets/img/Pokemons/charmander.png" alt="Background" class="fire" />
+                <img src="./assets/img/Pokemons/Bulbasaur.svg" alt="Background" class="grass" />
+              </div>
+              <div class="pokemon-info">
+                <div class="number-name">
+                  <p>#001</p>
+                  <h3>Bulbasaur</h3>
+                </div>
+                <div class="pokemon-type">
+                  <img src="./assets/img/Type-icons/color-icon-type-grass.svg" alt="Type" />
+                </div>
+              </div>
+            </button>
+
+            <button class="card js-open-details-pokemon">
+              <div class="pokemon-img">
+                <img src="./assets/img/Pokemons/Ivysaur.svg" alt="Background" class="grass" />
+              </div>
+              <div class="pokemon-info">
+                <div class="number-name">
+                  <p>#002</p>
+                  <h3>Ivysaur.svg</h3>
+                </div>
+                <div class="pokemon-type">
+                  <img src="./assets/img/Type-icons/color-icon-type-grass.svg" alt="Type" />
+                </div>
+              </div>
+            </button>
+
+            <button class="card js-open-details-pokemon">
+              <div class="pokemon-img">
+                <img src="./assets/img/Pokemons/Venusaur.svg" alt="Background" class="grass" />
+              </div>
+              <div class="pokemon-info">
+                <div class="number-name">
+                  <p>#003</p>
+                  <h3>Venusaur.svg</h3>
+                </div>
+                <div class="pokemon-type">
+                  <img src="./assets/img/Type-icons/color-icon-type-grass.svg" alt="Type" />
+                </div>
+              </div>
+            </button>
+
+            <button class="card js-open-details-pokemon">
+              <div class="pokemon-img">
+                <img src="./assets/img/Pokemons/Charmander-left.svg" alt="Background" class="fire" />
               </div>
               <div class="pokemon-info">
                 <div class="number-name">
@@ -394,10 +440,11 @@
                   <img src="./assets/img/Type-icons/color-icon-type-fire.svg" alt="Type" />
                 </div>
               </div>
-            </div>
-            <div class="card">
+            </button>
+
+            <button class="card js-open-details-pokemon">
               <div class="pokemon-img">
-                <img src="./assets/img/Pokemons/charmeleon.png" alt="Background" class="fire" />
+                <img src="./assets/img/Pokemons/Charmeleon.svg" alt="Background" class="fire" />
               </div>
               <div class="pokemon-info">
                 <div class="number-name">
@@ -408,10 +455,11 @@
                   <img src="./assets/img/Type-icons/color-icon-type-fire.svg" alt="Type" />
                 </div>
               </div>
-            </div>
-            <div class="card">
+            </button>
+
+            <button class="card js-open-details-pokemon">
               <div class="pokemon-img">
-                <img src="./assets/img/Pokemons/charizard.png" alt="Background" class="fire" />
+                <img src="./assets/img/Pokemons/Charizard.svg" alt="Background" class="fire" />
               </div>
               <div class="pokemon-info">
                 <div class="number-name">
@@ -422,112 +470,220 @@
                   <img src="./assets/img/Type-icons/color-icon-type-fire.svg" alt="Type" />
                 </div>
               </div>
-            </div>
-            <div class="card">
+            </button>
+
+            <button class="card js-open-details-pokemon">
               <div class="pokemon-img">
-                <img src="./assets/img/Pokemons/charizard.png" alt="Background" class="fire" />
+                <img src="./assets/img/Pokemons/Squirtle.svg" alt="Background" class="water" />
               </div>
               <div class="pokemon-info">
                 <div class="number-name">
-                  <p>#006</p>
-                  <h3>Charizard</h3>
+                  <p>#007</p>
+                  <h3>Squirtle</h3>
                 </div>
                 <div class="pokemon-type">
-                  <img src="./assets/img/Type-icons/color-icon-type-fire.svg" alt="Type" />
+                  <img src="./assets/img/Type-icons/color-icon-type-water.svg" alt="Type" />
                 </div>
               </div>
-            </div>
+            </button>
+
+            <button class="card js-open-details-pokemon">
+              <div class="pokemon-img">
+                <img src="./assets/img/Pokemons/Wartortle.svg" alt="Background" class="water" />
+              </div>
+              <div class="pokemon-info">
+                <div class="number-name">
+                  <p>#008</p>
+                  <h3>Wartortle</h3>
+                </div>
+                <div class="pokemon-type">
+                  <img src="./assets/img/Type-icons/color-icon-type-water.svg" alt="Type" />
+                </div>
+              </div>
+            </button>
+
+            <button class="card js-open-details-pokemon">
+              <div class="pokemon-img">
+                <img src="./assets/img/Pokemons/Blastoise-left.svg" alt="Background" class="water" />
+              </div>
+              <div class="pokemon-info">
+                <div class="number-name">
+                  <p>#009</p>
+                  <h3>Blastoise</h3>
+                </div>
+                <div class="pokemon-type">
+                  <img src="./assets/img/Type-icons/color-icon-type-water.svg" alt="Type" />
+                </div>
+              </div>
+            </button>
           </div>
+        </div>
+        <div class="load-more">
+          <a href="" class="btn-load-more">
+            Carregar mais pokémons
+          </a>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="s-modal">
-    <div class="container">
-      <div class="close">
+  <!-- <section class="s-modal" typePokemonModal="grass">
+    <div class="overlay"></div>
+    <div class="box">
+      <button class="close js-close-details-pokemon">
         <img src="./assets/img/Modal/close.svg" alt="Close">
-      </div>
-      <div class="modal">
-        <div class="left">
-          <div class="icon">
-            <img src="./assets/img/Type-icons/color-icon-type-grass.svg" alt="Icon">
-          </div>
+      </button>
+      <div class="left-container">
+        <div class="icon">
+          <img src="./assets/img/Type-icons/color-icon-type-grass.svg" alt="Type Icon">
         </div>
         <div class="pokemon">
           <img src="./assets/img/Pokemons/bulbasaur.svg" alt="Pokemon">
         </div>
-        <div class="right">
-          <div class="name">
-            <h2>Bulbasaur</h2>
-            <p>#001</p>
-          </div>
-          <div class="type">
-            <div class="tag-type grass">Grass</div>
-            <div class="tag-type poison">Poison</div>
-          </div>
-          <div class="physic">
-            <div class="height">
-              <p>Height</p>
-              <h4>0.7m</h4>
-            </div>
-            <div class="weight">
-              <p>Weight</p>
-              <h4>6.9kg</h4>
-            </div>
-            <div class="abilities">
-              <p>Abilities</p>
-              <h4>Overgrow</h4>
-            </div>
-          </div>
-          <div class="weaknesses">
-            <h3>Weaknesses</h3>
-            <div class="tags">
-              <div class="tag-type fire">Fire</div>
-              <div class="tag-type psychic">Psychic</div>
-              <div class="tag-type flying">Flying</div>
-              <div class="tag-type ice">Ice</div>
-            </div>
-          </div>
-          <div class="stats">
-            <h3>Stats</h3>
-            <div class="hp">
-              <h3>HP</h3>
-            </div>
-            <div class="attack">
-              <h3>Attack</h3>
-            </div>
-            <div class="defense">
-              <h3>Defense</h3>
-            </div>
-            <div class="sp-attack">
-              <h3>Sp. attack</h3>
-            </div>
-            <div class="sp-defense">
-              <h3>Sp. defense</h3>
-            </div>
-            <div class="speed">
-              <h3>Speed</h3>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
+      <div class="right-container">
+        <div class="name">
+          <h2>Bulbasaur</h2>
+          <span>#001</span>
+        </div>
+        <ul class="type">
+          <li>
+            <span class="tag-type grass">Grass</span>
+          </li>
+          <li>
+            <span class="tag-type poison">Poison</span>
+          </li>
+        </ul>
+        <ul class="info">
+          <li>
+            <span>Height</span>
+            <strong>0.7m</strong>
+          </li>
 
-  <footer>
-    <div class="container">
-      <div class="internal-container">
-        <div class="text-footer">
-          <h3>Machine Pokédex</h3>
-          <p>Todos os direitos reservados &copy; 2022</p>
+          <li>
+            <span>Weight</span>
+            <strong>6.9kg</strong>
+          </li>
+
+          <li>
+            <span>Abilities</span>
+            <strong>Overgrow</strong>
+          </li>
+        </ul>
+        <div class="weaknesses">
+          <h4>Weaknesses</h4>
+          <ul>
+            <li>
+              <span class="tag-type fire">Fire</span>
+            </li>
+            <li>
+              <span class="tag-type psychic">Psychic</span>
+            </li>
+            <li>
+              <span class="tag-type flying">Flying</span>
+            </li>
+            <li>
+              <span class="tag-type ice">Ice</span>
+            </li>
+          </ul>
         </div>
-        <div class="img-footer">
-          <img src="./assets/img/Logo.png" alt="" />
+        <div class="stats">
+          <h5>Stats</h5>
+          <div class="all">
+            <div class="item">
+              <span>HP</span>
+              <div class="bar-status">
+                <div class="bar"></div>
+                <ul class="separator">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+              <span>Attack</span>
+              <div class="bar-status">
+                <div class="bar"></div>
+                <ul class="separator">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+              <span>Defense</span>
+              <div class="bar-status">
+                <div class="bar"></div>
+                <ul class="separator">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+              <span>Sp. attack</span>
+              <div class="bar-status">
+                <div class="bar"></div>
+                <ul class="separator">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+              <span>Sp. defense</span>
+              <div class="bar-status">
+                <div class="bar"></div>
+                <ul class="separator">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="item">
+              <span>Speed</span>
+              <div class="bar-status">
+                <div class="bar"></div>
+                <ul class="separator">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </section> -->
+
+  <!-- <footer>
+    <div class="container">
+      <div class="text-footer">
+        <h3>Machine Pokédex</h3>
+        <p>Todos os direitos reservados &copy; 2022</p>
+      </div>
+      <div class="img-footer">
+        <img src="./assets/img/Logo.png" alt="" />
+      </div>
+    </div>
+  </footer> -->
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="./assets/js/lib/plugins.js"></script>

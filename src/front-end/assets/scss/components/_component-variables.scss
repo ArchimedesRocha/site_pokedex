@@ -1,37 +1,47 @@
 // Cores
 
-//Escala de Vermelho
-$cor01: #c90c0c;
-$cor02: #f33c3c;
-$cor03: #c20001;
-$cor04: #ba0001;
+:root {
+  //Escala de Vermelho
+  --type-red-100: #c90c0c;
+  --type-red-200: #f33c3c;
+  --type-red-300: #c20001;
+  --type-red-400: #ba0001;
 
-//Escala Azul
-$cor10: #3e75c3;
-$cor11: #3f5db3;
-$cor12: #3f67ba;
-$cor13: #afc0e3;
+  //Escala Azul
+  --type-blue-100: #3e75c3;
+  --type-blue-200: #3F5DB3;
+  --type-blue-300: #3f67ba;
+  --type-blue-400: #afc0e3;
 
-//Escala Cinza
-$cor30: #2f3133;
-$cor31: #7a7d80;
-$cor32: #acb9c1;
-$cor33: #ffffff;
-$cor34: rgba(241, 240, 245, 0.55);
-$cor35: #acb9c1;
-$cor36: #4d5053;
-$cor37: #a0afba;
-$cor38: #eff3f6;
+  //Escala Cinza
+  --type-gray-100: #2F3133;
+  --type-gray-200: #7a7d80;
+  --type-gray-300: #acb9c1;
+  --type-gray-400: #ffffff;
+  --type-gray-500: rgba(241, 240, 245, 0.55);
+  --type-gray-600: #acb9c1;
+  --type-gray-700: #4d5053;
+  --type-gray-800: #a0afba;
+  --type-gray-900: #eff3f6;
 
-//Escala Icons Type
-$cor40: #3e75c3;
-$cor41: #616EB7;
-$cor42: #CE8056;
-$cor43: #73B861;
-$cor44: #2C6AC1;
-$cor45: #6594A1;
-$cor46: #EED967;
-$cor47: #88A3D4;
-$cor48: #F66D6D;
-$cor49: #9BBA48;
-$cor50: #A6BBE8;
+  //Escala Pokemon Types
+  --type-color-all: #3e75c3;
+  --type-color-bug: #9BBA48;
+  --type-color-dark: #595761;
+  --type-color-dragon: #2C6AC1;
+  --type-color-electric: #D5BC34;
+  --type-color-fairy: #E296E1;
+  --type-color-fighting: #C44D61;
+  --type-color-ground: #CE8056;
+  --type-color-ice: #71BAAC;
+  --type-color-normal: #919191;
+  --type-color-poison: #AC6ACA;
+  --type-color-psychic: #EB8B85;
+  --type-color-rock: #84BEB3;
+  --type-color-ghost: #616EB7;
+  --type-color-grass: #73B861;
+  --type-color-steel: #6594A1;
+  --type-color-water: #4F77BE;
+  --type-color-fire: #E96303;
+  --type-color-flying: #758CBD;
+}

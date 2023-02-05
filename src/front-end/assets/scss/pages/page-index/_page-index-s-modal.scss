@@ -1,197 +1,359 @@
 .s-modal {
+  @include flex(row, center, center);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
 
-  .container {
-    background: url('../../assets/img/Modal/bg-bug.svg') no-repeat;
-    width: 71rem;
-    height: 50.8rem;
-    position: relative;
-    box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
-    border-radius: 1.6rem;
-
-    .close {
-      width: 4.6rem;
-      height: 4.6rem;
-      background-color: #fff;
-      padding: 1rem;
-      position: absolute;
-      top: -5rem;
-      right: 0;
-      border-radius: .5rem;
-      box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
-
-      @include flex(row, center, center);
-
-      img {
-        width: 2rem;
-        height: 2rem;
+  &[typePokemonModal="grass"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-bug.svg")
       }
     }
+  }
 
-    .modal {
+  &[typePokemonModal="dark"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-dark.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="dragon"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-dragon.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="electric"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-electric.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="fairy"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-fairy.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="fighting"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-fighting.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="ground"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-ground.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="ice"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-ice.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="normal"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-normal.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="poison"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-poison.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="psychic"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-psychic.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="rock"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-rock.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="ghost"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-ghost.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="steel"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-steel.svg")
+      }
+    }
+  }
+
+  &[typePokemonModal="flying"] {
+    .box {
+      .left-container {
+        background-image: url("../../assets/img/Modal/bg-flying.svg")
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .box {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 71rem;
+    height: 50.8rem;
+    background-color: white;
+    box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
+    border-radius: 1.6rem;
+    z-index: 1;
+    transform: translateY(4rem);
+    transition: transform .3s ease-in;
+
+    .close {
+      @include center();
+      position: absolute;
+      top: -4.4rem;
+      right: 0;
+      width: 3.6rem;
+      height: 3.6rem;
+      background-color: white;
+      border-radius: 0.8rem;
+      padding: .5rem;
+    }
+
+    .left-container {
       position: relative;
-      height: 100%;
+      width: 100%;
+      max-width: 19.1rem;
+      background-repeat: no-repeat;
+      background-position: center center;
 
-      .left {
-        width: 19.1rem;
-        position: relative;
-
-        .icon {
-          width: 3.4rem;
-          height: 3.4rem;
-          background-color: #fff;
-          border-radius: 50%;
-          padding: .75rem;
-          position: absolute;
-          top: 2rem;
-          right: 2rem;
-          z-index: 2;
-
-          img {
-            width: 1.7rem;
-          }
-        }
-
-        img {
-          &:nth-child(1) {
-            width: 19.1rem;
-          }
-        }
+      .icon {
+        @include center();
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 3.4rem;
+        height: 3.4rem;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        padding: .75rem;
       }
 
       .pokemon {
-        max-width: 20.2rem;
         position: absolute;
-        top: 35%;
-        left: 1%;
+        bottom: 13.1rem;
+        left: 1.4rem;
+        width: 20.2rem;
+      }
+    }
+
+    .right-container {
+      width: 100%;
+      padding: 3.5rem 7.2rem 2.9rem 7.4rem;
+
+      .name {
+        display: flex;
+        align-items: baseline;
+        gap: .8rem;
+        margin-bottom: 1rem;
+
+        h2 {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          font-size: 2.8rem;
+          line-height: 3.4rem;
+          letter-spacing: -0.01em;
+          color: var(--type-gray-100);
+        }
+
+        span {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2rem;
+          letter-spacing: -0.01em;
+          color: var(--type-gray-200);
+        }
       }
 
-      .right {
-        float: right;
-        padding: 3.5rem 7.2rem 3.5rem 7.4rem;
+      .type {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        margin-bottom: 3.2rem;
+      }
 
-        .name {
-          display: flex;
-          align-items: baseline;
-          gap: .8rem;
+      .info {
+        display: flex;
+        gap: 4.8rem;
+        margin-bottom: 3.2rem;
 
-          h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 2.8rem;
-            line-height: 3.4rem;
+        li {
+          @include flex(column, flex-start, flex-start);
+
+          span {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
             text-align: center;
             letter-spacing: -0.01em;
-            color: #2F3133;
-
+            color: var(--type-gray-200);
+            margin-bottom: .4rem;
           }
 
-          p {
+          strong {
             font-family: 'Montserrat', sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 2rem;
-            text-align: center;
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
             letter-spacing: -0.01em;
-            color: #7A7D80;
+            color: var(--type-gray-100);
 
           }
         }
+      }
 
-        .type {
+      .weaknesses {
+        margin-bottom: 3.2rem;
+
+        h4 {
+          font-family: 'Inter', sans-serif;
+          font-weight: 600;
+          font-size: 1.3rem;
+          line-height: 1.6rem;
+          letter-spacing: -0.01em;
+          color: var(--type-gray-700);
+          margin-bottom: 1.6rem;
+        }
+
+        ul {
           display: flex;
           gap: 1rem;
-          margin-top: 1rem;
+        }
+      }
+
+      .stats {
+        h5 {
+          font-family: 'Inter', sans-serif;
+          font-weight: 600;
+          font-size: 1.3rem;
+          line-height: 1.6rem;
+          letter-spacing: -0.01em;
+          color: var(--type-gray-700);
+          margin-bottom: 1.6rem;
         }
 
-        .physic {
+        .all {
           display: flex;
-          gap: 4.8rem;
-          margin-top: 3.2rem;
+          flex-direction: column;
+          gap: 1.3rem;
 
-          .height,
-          .weight,
-          .abilities {
-            p {
-              font-family: 'Inter', sans-serif;
-              font-style: normal;
-              font-weight: 400;
-              font-size: 1.3rem;
-              line-height: 1.6rem;
-              text-align: center;
-              letter-spacing: -0.01em;
-              color: #7A7D80;
-            }
-
-            h4 {
-              font-family: 'Montserrat', sans-serif;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 1.4rem;
-              line-height: 1.7rem;
-              text-align: center;
-              letter-spacing: -0.01em;
-              color: #2F3133;
-
-            }
-          }
-        }
-
-        .weaknesses {
-          margin-top: 3.2rem;
-
-          h3 {
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.3rem;
-            line-height: 1.6rem;
-            letter-spacing: -0.01em;
-            color: #4D5053;
-          }
-
-          .tags {
-            margin-top: 1.6rem;
+          .item {
             display: flex;
-            gap: 1rem;
-          }
-        }
+            justify-content: space-between;
 
-        .stats {
-          margin-top: 3.2rem;
-
-          h3 {
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.3rem;
-            line-height: 1.6rem;
-            letter-spacing: -0.01em;
-            color: #4D5053;
-
-          }
-
-          .hp,
-          .attack,
-          .defense,
-          .sp-attack,
-          .sp-defense,
-          .speed {
-            margin-top: 1.6rem;
-
-            h3 {
+            span {
+              display: block;
+              width: 6.8rem;
               font-family: 'Inter', sans-serif;
-              font-style: normal;
               font-weight: 400;
               font-size: 1.2rem;
               line-height: 1.5rem;
-              color: #7A7D80;
+              color: var(--type-gray-200);
+            }
 
+            .bar-status {
+              position: relative;
+              width: 100%;
+              max-width: 28.3rem;
+              height: 0.3rem;
+              background-color: var(--type-gray-900);
+
+              .bar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 89%;
+                height: 100%;
+                z-index: 0;
+                background-color: var(--type-red-300);
+              }
+
+              .separator {
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include center();
+                width: 100%;
+                gap: 5.4rem;
+
+                li {
+                  width: 0.4rem;
+                  height: 0.3rem;
+                  background-color: white;
+                }
+              }
             }
           }
         }
       }
+    }
+  }
+}
+
+.open-modal {
+  .s-modal {
+    opacity: 1;
+    pointer-events: all;
+
+    .box {
+      transform: translateY(0);
     }
   }
 }
