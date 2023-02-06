@@ -350,10 +350,8 @@
       }
     }
   }
-}
 
-.open-modal {
-  .s-modal {
+  &.active-modal {
     opacity: 1;
     pointer-events: all;
 
