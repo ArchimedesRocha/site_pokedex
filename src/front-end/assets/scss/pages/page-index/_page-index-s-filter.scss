@@ -520,7 +520,7 @@
 
             p {
               font-family: "Inter", sans-serif;
-              font-size: 1.4rem;
+              font-size: 1.6rem;
               line-height: 150%;
               color: var(--type-gray-200);
             }
@@ -645,7 +645,7 @@
         .btn-load-more {
           font-family: 'Montserrat', sans-serif;
           font-weight: 600;
-          font-size: 1.4rem;
+          font-size: 1.6rem;
           letter-spacing: -0.01em;
           color: var(--type-blue-200);
           background-color: rgba(63, 93, 179, 0.1);
@@ -662,5 +662,77 @@
       }
     }
 
+  }
+}
+
+@include responsive(1100px) {
+  .s-filter {
+    .container {
+      grid-template-columns: 13.9rem 1fr;
+
+      .result-filter {
+        padding-left: 3.1rem;
+      }
+    }
+  }
+}
+
+@include responsive(900px) {
+  .s-filter {
+    .container {
+      padding-top: 1.4rem;
+      grid-template-columns: 1fr;
+
+      .select-filter {
+        display: none;
+      }
+
+      .result-filter {
+        padding-left: 0;
+        border-left: none;
+      }
+    }
+  }
+}
+
+@include responsive(700px) {
+  .s-filter {
+    .container {
+
+      .result-filter {
+
+        .result-bottom {
+          .cards {
+            grid-template-columns: repeat(2, 1fr);
+
+            .card {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(480px) {
+  .s-filter {
+    .container {
+
+      .result-filter {
+
+        .result-top {
+          flex-direction: column;
+          gap: 5rem;
+          align-items: center;
+        }
+
+        .result-bottom {
+          .cards {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
   }
 }

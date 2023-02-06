@@ -1,0 +1,640 @@
+.s-filter-mobile {
+  display: none;
+  margin-bottom: 5.5rem;
+  position: relative;
+
+  .container {
+
+    &.active {
+      .item-selected {
+        svg {
+          rotate: 180deg;
+        }
+      }
+
+      .dropdown-select {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    .item-selected {
+      @include flex(row, center, space-between);
+      cursor: pointer;
+      width: 100%;
+      height: 5.6rem;
+      border: 0.1rem solid var(--type-gray-800);
+      padding: 2.2rem;
+      border-radius: 1rem 1rem 0 0;
+      background-color: white;
+
+      p {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: var(--type-gray-200);
+
+        span {
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 1.5rem;
+          line-height: 150%;
+          color: var(--type-gray-100);
+        }
+      }
+
+      svg {
+        transition: all .3s;
+      }
+    }
+
+    .dropdown-select {
+      width: 87rem;
+      height: 22.3rem;
+
+      position: absolute;
+      z-index: 2;
+
+      border: 0.1rem solid var(--type-gray-800);
+      border-top: 0;
+      border-radius: 0 0 1rem 1rem;
+      background-color: white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      padding: 1.5rem 2.2rem;
+
+      overflow-y: auto;
+
+      opacity: 0;
+      pointer-events: none;
+
+      transition: all .3s;
+
+      &::-webkit-scrollbar {
+        width: 0.5rem;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--type-blue-100);
+        border-radius: 0 0 50rem 0;
+      }
+
+      li {
+        padding-bottom: 1.5rem;
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 1.5rem;
+
+          svg {
+            width: 2.8rem;
+            height: 2.8rem;
+            transition: all .3s;
+
+            path {
+              fill: var(--type-gray-300);
+              transition: all .3s;
+            }
+
+            circle {
+              stroke: var(--type-gray-300);
+              fill: white;
+              transition: all .3s;
+            }
+          }
+
+          p {
+            font-family: "Inter", sans-serif;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 150%;
+            color: var(--type-gray-600);
+            transition: all .3s;
+          }
+        }
+
+        &:nth-child(1) {
+          svg {
+            path {
+              fill: var(--type-gray-300);
+              stroke: white;
+            }
+
+            circle {
+              stroke: white;
+              fill: var(--type-gray-300);
+            }
+          }
+
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-all);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-all);
+              }
+            }
+
+            p {
+              color: var(--type-color-all);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-all);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-all);
+              }
+            }
+
+            p {
+              color: var(--type-color-all);
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-ghost);
+              }
+
+              circle {
+                stroke: var(--type-color-ghost);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-ghost);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-ghost);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-ghost);
+              }
+            }
+
+            p {
+              color: var(--type-color-ghost);
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-ground);
+              }
+
+              circle {
+                stroke: var(--type-color-ground);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-ground);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-ground);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-ground);
+              }
+            }
+
+            p {
+              color: var(--type-color-ground);
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-grass);
+              }
+
+              circle {
+                stroke: var(--type-color-grass);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-grass);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-grass);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-grass);
+              }
+            }
+
+            p {
+              color: var(--type-color-grass);
+            }
+          }
+        }
+
+        &:nth-child(5) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-dragon);
+              }
+
+              circle {
+                stroke: var(--type-color-dragon);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-dragon);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-dragon);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-dragon);
+              }
+            }
+
+            p {
+              color: var(--type-color-dragon);
+            }
+          }
+        }
+
+        &:nth-child(6) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-steel);
+              }
+
+              circle {
+                stroke: var(--type-color-steel);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-steel);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-steel);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-steel);
+              }
+            }
+
+            p {
+              color: var(--type-color-steel);
+            }
+          }
+        }
+
+        &:nth-child(7) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-electric);
+              }
+
+              circle {
+                stroke: var(--type-color-electric);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-electric);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-electric);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-electric);
+              }
+            }
+
+            p {
+              color: var(--type-color-electric);
+            }
+          }
+        }
+
+        &:nth-child(8) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-ice);
+              }
+
+              circle {
+                stroke: var(--type-color-ice);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-ice);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-ice);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-ice);
+              }
+            }
+
+            p {
+              color: var(--type-color-ice);
+            }
+          }
+        }
+
+        &:nth-child(9) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-fire);
+              }
+
+              circle {
+                stroke: var(--type-color-fire);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-fire);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-fire);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-fire);
+              }
+            }
+
+            p {
+              color: var(--type-color-fire);
+            }
+          }
+        }
+
+        &:nth-child(10) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-bug);
+              }
+
+              circle {
+                stroke: var(--type-color-bug);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-bug);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-bug);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-bug);
+              }
+            }
+
+            p {
+              color: var(--type-color-bug);
+            }
+          }
+        }
+
+        &:nth-child(11) {
+          &:hover {
+            svg {
+              path {
+                fill: var(--type-color-rock);
+              }
+
+              circle {
+                stroke: var(--type-color-rock);
+                fill: white;
+              }
+            }
+
+            p {
+              color: var(--type-color-rock);
+
+            }
+          }
+
+          .active-button {
+            svg {
+              path {
+                fill: var(--type-color-rock);
+                stroke: white;
+              }
+
+              circle {
+                stroke: white;
+                fill: var(--type-color-rock);
+              }
+            }
+
+            p {
+              color: var(--type-color-rock);
+            }
+          }
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@include responsive(900px) {
+  .s-filter-mobile {
+    display: block;
+  }
+}
+
+@include responsive(800px) {
+  .s-filter-mobile {
+    .container {
+      .dropdown-select {
+        width: 77rem;
+      }
+    }
+  }
+}
+
+@include responsive(700px) {
+  .s-filter-mobile {
+    .container {
+      .dropdown-select {
+        width: 67rem;
+      }
+    }
+  }
+}
+
+@include responsive(600px) {
+  .s-filter-mobile {
+    .container {
+      .dropdown-select {
+        width: 67rem;
+      }
+    }
+  }
+}
+
+@include responsive(480px) {
+  .s-filter-mobile {
+    .container {
+      .dropdown-select {
+        width: 45rem;
+      }
+    }
+  }
+}
+
+@include responsive(450px) {
+  .s-filter-mobile {
+    .container {
+      .dropdown-select {
+        width: 42rem;
+      }
+    }
+  }
+}
+
+@include responsive(430px) {
+  .s-filter-mobile {
+    .container {
+      .dropdown-select {
+        width: 40rem;
+      }
+    }
+  }
+}
+
+@include responsive(375px) {
+  .s-filter-mobile {
+    .container {
+      .dropdown-select {
+        width: 37.5rem;
+      }
+    }
+  }
+}

@@ -144,8 +144,8 @@
     display: flex;
     position: relative;
     width: 100%;
-    max-width: 71rem;
-    height: 50.8rem;
+    max-width: 75rem;
+    height: 52.8rem;
     background-color: white;
     box-shadow: 0px 10px 40px rgba(13, 12, 71, 0.05);
     border-radius: 1.6rem;
@@ -171,6 +171,8 @@
       max-width: 19.1rem;
       background-repeat: no-repeat;
       background-position: center center;
+      background-size: cover;
+      border-radius: 1.6rem 0 0 1.6rem;
 
       .icon {
         @include center();
@@ -214,7 +216,7 @@
         span {
           font-family: 'Montserrat', sans-serif;
           font-weight: 400;
-          font-size: 1.6rem;
+          font-size: 1.8rem;
           line-height: 2rem;
           letter-spacing: -0.01em;
           color: var(--type-gray-200);
@@ -239,7 +241,7 @@
           span {
             font-family: 'Inter', sans-serif;
             font-weight: 400;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             line-height: 1.6rem;
             text-align: center;
             letter-spacing: -0.01em;
@@ -250,7 +252,7 @@
           strong {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             line-height: 1.7rem;
             letter-spacing: -0.01em;
             color: var(--type-gray-100);
@@ -265,7 +267,7 @@
         h4 {
           font-family: 'Inter', sans-serif;
           font-weight: 600;
-          font-size: 1.3rem;
+          font-size: 1.6rem;
           line-height: 1.6rem;
           letter-spacing: -0.01em;
           color: var(--type-gray-700);
@@ -282,7 +284,7 @@
         h5 {
           font-family: 'Inter', sans-serif;
           font-weight: 600;
-          font-size: 1.3rem;
+          font-size: 1.6rem;
           line-height: 1.6rem;
           letter-spacing: -0.01em;
           color: var(--type-gray-700);
@@ -292,18 +294,19 @@
         .all {
           display: flex;
           flex-direction: column;
-          gap: 1.3rem;
+          gap: 1.6rem;
 
           .item {
             display: flex;
+            align-items: center;
             justify-content: space-between;
 
             span {
               display: block;
-              width: 6.8rem;
+              width: 9rem;
               font-family: 'Inter', sans-serif;
               font-weight: 400;
-              font-size: 1.2rem;
+              font-size: 1.6rem;
               line-height: 1.5rem;
               color: var(--type-gray-200);
             }
@@ -313,16 +316,17 @@
               width: 100%;
               max-width: 28.3rem;
               height: 0.3rem;
-              background-color: var(--type-gray-900);
+              background-color: var(--type-gray-1000);
 
               .bar {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 89%;
+                width: 39%;
                 height: 100%;
                 z-index: 0;
                 background-color: var(--type-red-300);
+                border-radius: .5rem;
               }
 
               .separator {
@@ -332,9 +336,10 @@
                 @include center();
                 width: 100%;
                 gap: 5.4rem;
+                border-radius: .5rem;
 
                 li {
-                  width: 0.4rem;
+                  width: 0.6rem;
                   height: 0.3rem;
                   background-color: white;
                 }
@@ -354,6 +359,155 @@
 
     .box {
       transform: translateY(0);
+    }
+  }
+}
+
+@include responsive(1280px) {
+  .s-modal {
+    .box {
+      max-width: 52.8rem;
+      height: auto;
+      flex-direction: column;
+
+      .close {
+        top: 2rem;
+        left: 2rem;
+        z-index: 1001;
+      }
+
+      .left-container {
+        max-width: 100%;
+        background-size: cover;
+        border-radius: 1.6rem 1.6rem 0 0;
+        margin-bottom: 5.5rem;
+
+        .pokemon {
+          position: relative;
+          top: 4.7rem;
+          left: initial;
+          margin: 0 auto;
+        }
+      }
+
+      .right-container {
+
+        .name,
+        .type {
+          justify-content: center;
+        }
+
+        .info {
+          @include center();
+          flex-wrap: wrap;
+          gap: 1.7rem;
+          margin: 0 auto;
+
+          li {
+            flex-direction: row;
+            gap: .4rem;
+          }
+        }
+
+        .weaknesses {
+          @include center();
+          flex-direction: column;
+          margin-top: 3.2rem;
+
+          ul {
+            justify-items: center;
+          }
+        }
+
+        .stats {
+          h5 {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(800px) {
+  .s-modal {
+    .box {
+
+      .left-container {
+        margin-bottom: 0;
+
+        .pokemon {
+          top: .7rem;
+
+          img {
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .right-container {
+
+        .weaknesses {
+          h4 {
+            display: none;
+          }
+        }
+
+        .stats {
+          h5 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(480px) {
+  .s-modal {
+    .box {
+      max-width: 95%;
+
+      .right-container {
+        padding: 2rem;
+
+        .weaknesses {
+          h4 {
+            display: block;
+          }
+        }
+
+        .stats {
+          h5 {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(430px) {
+  .s-modal {
+    .box {
+      max-width: 95%;
+
+      .right-container {
+        .stats {
+          .all {
+            .item {
+              .bar-status {
+                max-width: 25rem;
+
+                .bar {
+                  width: 30%;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

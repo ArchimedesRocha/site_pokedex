@@ -1,7 +1,7 @@
 .s-search {
   width: 100%;
   position: absolute;
-  bottom: -8.5rem;
+  top: 72.5rem;
   background: linear-gradient(284.15deg,
       #eff3f6 15.54%,
       rgba(239, 243, 246, 0) 86.34%);
@@ -42,7 +42,7 @@
       padding-left: 0.7rem;
 
       position: absolute;
-      right: 0;
+      right: 1rem;
       z-index: 1;
 
       transition: all .3s;
@@ -79,5 +79,48 @@
       }
     }
 
+  }
+}
+
+@include responsive(800px) {
+  .s-search {
+    .container {
+      justify-content: center;
+
+      .text {
+        h2 {
+          width: 100%;
+        }
+      }
+
+      .search {
+        max-width: 97%;
+        right: initial;
+        bottom: 4rem;
+      }
+    }
+  }
+}
+
+@include responsive(480px) {
+  .s-search {
+    top: 58.6rem;
+
+    .container {
+
+      .search {
+        bottom: 3rem;
+      }
+    }
+  }
+}
+
+@include responsive(375px) {
+  .s-search {
+    .container {
+      .search {
+        max-width: 38.3rem;
+      }
+    }
   }
 }

@@ -17,6 +17,11 @@ openCardPokemon.forEach(card => {
 closeCardPokemon.forEach(card => {
   card.addEventListener('click', closeDetailsPokemon)
 })
+const btnDropdownSelect = document.querySelector('.js-open-select');
+
+btnDropdownSelect.addEventListener('click', () => {
+  btnDropdownSelect.parentElement.classList.toggle('active');
+})
 /**
  * Swiper 8.0.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions

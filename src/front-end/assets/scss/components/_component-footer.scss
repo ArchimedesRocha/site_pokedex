@@ -34,3 +34,26 @@ footer {
     }
   }
 }
+
+@include responsive(1100px) {
+  footer {
+    .container {
+      padding: 6.5rem 1.5rem;
+    }
+  }
+}
+
+@include responsive(480px) {
+  footer {
+    .container {
+      flex-direction: column;
+      gap: 3rem;
+
+      .text-footer {
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
