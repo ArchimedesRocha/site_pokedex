@@ -2,7 +2,7 @@ let activeModal = null;
 
 const selectCard = document.querySelectorAll('.js-open-details-pokemon');
 const closeCardPokemon = document.querySelectorAll('.js-close-details-pokemon');
-const openModal = document.querySelectorAll('.s-modal');
+const openModal = document.querySelectorAll('.s-all-modal .s-modal');
 
 function handleCardClick(event) {
   event.preventDefault();
