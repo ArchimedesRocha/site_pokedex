@@ -1,11 +1,14 @@
+function firstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 //--------------------------------------------------
-//Definindo a url da API
+//DEFININDO URL DA API
 //--------------------------------------------------
 listingPokemons('https://pokeapi.co/api/v2/pokemon?limit=9&offset=0');
 
 //--------------------------------------------------
-//Consumindo os dados da API e instancionando em objetos
+//CONSUMINDO DADOS DA API E INSTÂNCIANDO OBJETOS
 //--------------------------------------------------
 function listingPokemons(urlApi) {
   axios({
@@ -65,22 +68,26 @@ function listingPokemons(urlApi) {
   })
 }
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+
 //--------------------------------------------------
-// Criando o Card do Pokemon
+// CRIANDO O CARD COMPLETO COM INFORMAÇÕES DOS POKEMONS
 //--------------------------------------------------
 const areaPokemons = document.getElementById('js-list-pokemon')
 
 function createCardPokemon(code, name, image, type) {
 
   //--------------------------------------------------
-  // Criando o Card do Pokemon
+  // CRIANDO A ESTRUTURA DO CARD
   //--------------------------------------------------
   let card = document.createElement('button');
   card.classList = `card js-open-details-pokemon ${type}`
   areaPokemons.appendChild(card);
 
   //--------------------------------------------------
-  // Criando a div pokemon-img e o que tem dentro dela
+  // CRIANDO ESTRUTURA DA IMAGEM DO POKEMON E BACKGROUND
   //--------------------------------------------------
   let divPokemonImage = document.createElement('div');
   divPokemonImage.classList = `pokemon-img`
@@ -92,7 +99,7 @@ function createCardPokemon(code, name, image, type) {
   divPokemonImage.appendChild(imgBg);
 
   //--------------------------------------------------
-  // Criando a div pokemon-info e o que tem dentro dela
+  // CRIANDO O CARD DO POKEMON
   //--------------------------------------------------
   let divPokemonInfo = document.createElement('div')
   divPokemonInfo.classList = `pokemon-info`
@@ -107,7 +114,7 @@ function createCardPokemon(code, name, image, type) {
   divNumberName.appendChild(pokemonNumber)
 
   let pokemonName = document.createElement('h3')
-  pokemonName.textContent = name
+  pokemonName.textContent = firstLetter(name)
   divNumberName.appendChild(pokemonName)
 
   let divPokemonType = document.createElement('div')
@@ -119,10 +126,6 @@ function createCardPokemon(code, name, image, type) {
   divPokemonType.appendChild(imgType)
 }
 
-//--------------------------------------------------
-// Criando o Modal do Pokemon
-//--------------------------------------------------
-function createModalPokemon() {
-  console.log(createModalPokemon)
-}
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//------------------------------------------------------------------------------------------------------------------------------------------------------
