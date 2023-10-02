@@ -9,4 +9,3 @@ function showMorePokemons() {
 }
 
 btnLoadMore.addEventListener('click', showMorePokemons);
-

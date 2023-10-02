@@ -21,23 +21,6 @@
             justify-content: flex-start;
             gap: 2.3rem;
 
-            svg {
-              width: 2.8rem;
-              height: 2.8rem;
-              transition: all .3s;
-
-              path {
-                fill: var(--type-gray-300);
-                transition: all .3s;
-              }
-
-              circle {
-                stroke: var(--type-gray-300);
-                fill: white;
-                transition: all .3s;
-              }
-            }
-
             p {
               font-family: "Inter", sans-serif;
               font-weight: 600;
@@ -46,441 +29,218 @@
               color: var(--type-gray-600);
               transition: all .3s;
             }
-          }
 
-          &:nth-child(1) {
-            svg {
-              path {
-                fill: var(--type-gray-300);
-                stroke: white;
+            &.normal,
+            &.water,
+            &.steel,
+            &.shadow,
+            &.rock,
+            &.psychic,
+            &.poison,
+            &.ice,
+            &.ground,
+            &.grass,
+            &.ghost,
+            &.flying,
+            &.fire,
+            &.fighting,
+            &.fairy,
+            &.electric,
+            &.dragon,
+            &.dark,
+            &.bug,
+            &.all {
+
+              transition: all .3s;
+
+              .hover-img {
+                display: none;
               }
 
-              circle {
-                stroke: white;
-                fill: var(--type-gray-300);
+              &:hover {
+                margin-left: 1rem;
+
+                .normal-img {
+                  display: none;
+                }
+
+                .hover-img {
+                  display: block;
+                }
               }
             }
 
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-all);
-                  stroke: white;
+            /* Tipo Normal */
+            &.normal {
+              &:hover {
+                p {
+                  color: var(--type-color-normal);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-all);
-                }
-              }
-
-              p {
-                color: var(--type-color-all);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-all);
-                  stroke: white;
+            /* Tipo Bug */
+            &.bug {
+              &:hover {
+                p {
+                  color: var(--type-color-bug);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-all);
-                }
-              }
-
-              p {
-                color: var(--type-color-all);
-              }
-            }
-          }
-
-          &:nth-child(2) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-ghost);
-                }
-
-                circle {
-                  stroke: var(--type-color-ghost);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-ghost);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-ghost);
-                  stroke: white;
+            /* Tipo Dark */
+            &.dark {
+              &:hover {
+                p {
+                  color: var(--type-color-dark);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-ghost);
-                }
-              }
-
-              p {
-                color: var(--type-color-ghost);
-              }
-            }
-          }
-
-          &:nth-child(3) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-ground);
-                }
-
-                circle {
-                  stroke: var(--type-color-ground);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-ground);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-ground);
-                  stroke: white;
+            /* Tipo Dragon */
+            &.dragon {
+              &:hover {
+                p {
+                  color: var(--type-color-dragon);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-ground);
-                }
-              }
-
-              p {
-                color: var(--type-color-ground);
-              }
-            }
-          }
-
-          &:nth-child(4) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-grass);
-                }
-
-                circle {
-                  stroke: var(--type-color-grass);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-grass);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-grass);
-                  stroke: white;
+            /* Tipo Electric */
+            &.electric {
+              &:hover {
+                p {
+                  color: var(--type-color-electric);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-grass);
-                }
-              }
-
-              p {
-                color: var(--type-color-grass);
-              }
-            }
-          }
-
-          &:nth-child(5) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-dragon);
-                }
-
-                circle {
-                  stroke: var(--type-color-dragon);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-dragon);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-dragon);
-                  stroke: white;
+            /* Tipo Fairy */
+            &.fairy {
+              &:hover {
+                p {
+                  color: var(--type-color-fairy);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-dragon);
-                }
-              }
-
-              p {
-                color: var(--type-color-dragon);
-              }
-            }
-          }
-
-          &:nth-child(6) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-steel);
-                }
-
-                circle {
-                  stroke: var(--type-color-steel);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-steel);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-steel);
-                  stroke: white;
+            /* Tipo Fighting */
+            &.fighting {
+              &:hover {
+                p {
+                  color: var(--type-color-fighting);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-steel);
-                }
-              }
-
-              p {
-                color: var(--type-color-steel);
-              }
-            }
-          }
-
-          &:nth-child(7) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-electric);
-                }
-
-                circle {
-                  stroke: var(--type-color-electric);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-electric);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-electric);
-                  stroke: white;
+            /* Tipo Ground */
+            &.ground {
+              &:hover {
+                p {
+                  color: var(--type-color-ground);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-electric);
-                }
-              }
-
-              p {
-                color: var(--type-color-electric);
-              }
-            }
-          }
-
-          &:nth-child(8) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-ice);
-                }
-
-                circle {
-                  stroke: var(--type-color-ice);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-ice);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-ice);
-                  stroke: white;
+            /* Tipo Ice */
+            &.ice {
+              &:hover {
+                p {
+                  color: var(--type-color-ice);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-ice);
-                }
-              }
-
-              p {
-                color: var(--type-color-ice);
-              }
-            }
-          }
-
-          &:nth-child(9) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-fire);
-                }
-
-                circle {
-                  stroke: var(--type-color-fire);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-fire);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-fire);
-                  stroke: white;
+            /* Tipo Poison */
+            &.poison {
+              &:hover {
+                p {
+                  color: var(--type-color-poison);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-fire);
-                }
-              }
-
-              p {
-                color: var(--type-color-fire);
-              }
-            }
-          }
-
-          &:nth-child(10) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-bug);
-                }
-
-                circle {
-                  stroke: var(--type-color-bug);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-bug);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-bug);
-                  stroke: white;
+            /* Tipo Psychic */
+            &.psychic {
+              &:hover {
+                p {
+                  color: var(--type-color-psychic);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-bug);
-                }
-              }
-
-              p {
-                color: var(--type-color-bug);
-              }
-            }
-          }
-
-          &:nth-child(11) {
-            &:hover {
-              svg {
-                path {
-                  fill: var(--type-color-rock);
-                }
-
-                circle {
-                  stroke: var(--type-color-rock);
-                  fill: white;
-                }
-              }
-
-              p {
-                color: var(--type-color-rock);
-
               }
             }
 
-            .active-button {
-              svg {
-                path {
-                  fill: var(--type-color-rock);
-                  stroke: white;
+            /* Tipo Rock */
+            &.rock {
+              &:hover {
+                p {
+                  color: var(--type-color-rock);
                 }
-
-                circle {
-                  stroke: white;
-                  fill: var(--type-color-rock);
-                }
-              }
-
-              p {
-                color: var(--type-color-rock);
               }
             }
-          }
 
-          &:last-child {
-            padding-bottom: 0;
+            /* Tipo Ghost */
+            &.ghost {
+              &:hover {
+                p {
+                  color: var(--type-color-ghost);
+                }
+              }
+            }
+
+            /* Tipo Grass */
+            &.grass {
+              &:hover {
+                p {
+                  color: var(--type-color-grass);
+                }
+              }
+            }
+
+            /* Tipo Steel */
+            &.steel {
+              &:hover {
+                p {
+                  color: var(--type-color-steel);
+                }
+              }
+            }
+
+            /* Tipo Water */
+            &.water {
+              &:hover {
+                p {
+                  color: var(--type-color-water);
+                }
+              }
+            }
+
+            /* Tipo Fire */
+            &.fire {
+              &:hover {
+                p {
+                  color: var(--type-color-fire);
+                }
+              }
+            }
+
+            /* Tipo Flying */
+            &.flying {
+              &:hover {
+                p {
+                  color: var(--type-color-flying);
+                }
+              }
+            }
+
+            /* Tipo Shadow */
+            &.shadow {
+              &:hover {
+                p {
+                  color: var(--type-color-shadow);
+                }
+              }
+            }
+
           }
         }
       }

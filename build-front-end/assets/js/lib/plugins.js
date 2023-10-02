@@ -191,8 +191,14 @@ axios({
       itemType.appendChild(buttonType);
   
       let srcType = document.createElement('img');
+      srcType.classList = `normal-img`;
       srcType.setAttribute('src', `./assets/img/Type-icons/icon-type-${type.name}.svg`);
       buttonType.appendChild(srcType);
+
+      let srcTypeHover = document.createElement('img');
+      srcTypeHover.classList = `hover-img`;
+      srcTypeHover.setAttribute('src', `./assets/img/Type-icons/color-icon-type-${type.name}.svg`);
+      buttonType.appendChild(srcTypeHover);
 
       let nameType = document.createElement('p')
       nameType.textContent = firstLetter(type.name);
@@ -223,8 +229,6 @@ function showMorePokemons() {
 }
 
 btnLoadMore.addEventListener('click', showMorePokemons);
-
-
 let activeModal = null;
 
 const selectCard = document.querySelectorAll('.js-open-details-pokemon');
